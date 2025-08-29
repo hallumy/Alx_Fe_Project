@@ -9,14 +9,20 @@ function Navbar() {
       </h1>
       <div className="flex gap-6">
         <Link
-          to="/trips"
-          className="px-4 py-2 border rounded-lg hover:bg-white hover:text-[#2F539B] transition"
+          to="/Home"
+          className="px-4 py-2 rounded-lg hover:bg-white hover:text-[#347C2C] transition"
         >
-          View Dashboard
+          Home
         </Link>
         <Link
-          to="/invoices"
-          className="px-4 py-2 border rounded-lg hover:bg-white hover:text-[#2F539B] transition"
+          to="/Dashboard"
+          className="px-4 py-2 rounded-lg hover:bg-white hover:text-[#347C2C] transition"
+        >
+          Dashboard
+        </Link>
+        <Link
+          to="/Login"
+          className="px-4 py-2 rounded-lg hover:bg-white hover:text-[#347C2C] transition"
         >
           Login
         </Link>

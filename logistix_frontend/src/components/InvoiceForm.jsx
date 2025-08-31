@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function InvoiceForm() {
-  return (
+    const [invoices, setInvoices] = useState([])
+    const [newInvoice, SetNewInvoice] = useState({customer:"", amount:""});
+
+    useEffect(() => {
+        fetch("http://localhost:3000/api/invoices")
+        .then((res) => res.json())
+        .then(setInvoices);
+    }, []);
+
+    const handleChange = (e) => {
+        SetNewInvoice({ ...newInvoice, [e.target.name]: e.target.value});
+    };
+
+    const handleSave = async () => {
+        const res = await fetch("http://localhost:3000/api/invoices", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(newInvoice),
+        });
+        const saved = await res.json();
+        setInvoices([...invoices, saved]);
+        SetNewInvoice({customer: "", amount: ""});
+            
+    };
+
+   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
       <h3 className="text-xl font-semibold text-gray-800 mb-4">Create Invoice</h3>
 

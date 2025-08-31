@@ -6,6 +6,10 @@ import Trips from "./pages/Trips";
 import Invoices from "./pages/Invoices";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
+import Drivers from "./pages/Drivers";
+import Vehicles from "./pages/Vehicles";
+import Signup from "./pages/Signup";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
         <Route path="/trips" element={<Trips />} />
         <Route path="/invoices" element={<Invoices />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/drivers" element={<Drivers />} />
+        <Route path="/vehicles" element={<Vehicles />} />
       </Routes>
     </Router>
   );

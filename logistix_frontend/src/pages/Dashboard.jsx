@@ -8,8 +8,8 @@ function Dashboard() {
         <h2 className="text-2xl font-bold mb-6">Logistix Menu</h2>
         <nav className="flex flex-col gap-4">
           <a href="/dashboard" className="hover:text-gray-200">Dashboard</a>
-          <a href="/driverprofile" className="hover:text-gray-200">Driver</a>
-          <a href="/vehicleprofile" className="hover:text-gray-200">Vehicle</a>
+          <a href="/drivers" className="hover:text-gray-200">Driver</a>
+          <a href="/vehicles" className="hover:text-gray-200">Vehicle</a>
           <a href="/trips" className="hover:text-gray-200">Trips</a>
           <a href="/fuel-logs" className="hover:text-gray-200">Fuel Logs</a>
           <a href="/expenses" className="hover:text-gray-200">Expenses</a>

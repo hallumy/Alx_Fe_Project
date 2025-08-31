@@ -8,7 +8,9 @@ function SidebarLayout() {
         <h2 className="text-xl font-bold mb-6">Dashboard</h2>
         <nav className="flex flex-col gap-4">
           <Link to="/trips" className="hover:text-gray-300">Trips</Link>
+          <Link to="/vehicles" className="hover:text-gray-300">Trips</Link>
           <Link to="/invoices" className="hover:text-gray-300">Invoices</Link>
+          <Link to="/drivers" className="hover:text-gray-300">Trips</Link>
         </nav>
       </aside>
 
